@@ -17,7 +17,7 @@ const Header = () => {
   };
 
   return (
-    <div className="flex items-center justify-between py-2.5 font-jaldi sticky top-0 left-0 w-full z-100 bg-white">
+    <div className="flex items-center justify-between py-2.5 font-jaldi sticky top-0 left-0 w-full z-[100] bg-white">
       <h1 className="text-2xl uppercase lg:text-4xl">
         <Link to="/" className="font-bold">
           Flavor<span className="text-customOrange">Nest</span>
