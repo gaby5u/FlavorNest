@@ -1,41 +1,47 @@
 import { Link } from "react-router-dom";
+import { Menu, X } from "lucide-react";
+import { useState } from "react";
 
 import Nav from "./Nav";
+import BurgerOpenedMenu from "./BurgerOpenedMenu";
 
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
   return (
-    <div className="flex items-center justify-between py-2 font-jaldi sticky top-0 left-0 w-full z-100 bg-white">
-      <h1 className="text-4xl uppercase">
+    <div className="flex items-center justify-between py-2.5 font-jaldi sticky top-0 left-0 w-full z-100 bg-white">
+      <h1 className="text-2xl uppercase lg:text-4xl">
         <Link to="/" className="font-bold">
           Flavor<span className="text-customOrange">Nest</span>
         </Link>
       </h1>
       <Nav />
-      <div className="flex items-center gap-7">
-        <div className="flex gap-1">
-          <input
-            type="text"
-            placeholder="Search..."
-            className="bg-customLightGray rounded-full text-2xl px-8 max-w-[200px]"
-          />
-          <button className="bg-customLightGray rounded-full p-4 text-customDarkGray">
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M22.0474 22.0465L17.9777 17.9767M17.3963 9.25582C17.3963 10.3247 17.1857 11.3831 16.7767 12.3707C16.3676 13.3582 15.7681 14.2555 15.0122 15.0113C14.2564 15.7672 13.3591 16.3667 12.3716 16.7758C11.3841 17.1848 10.3256 17.3954 9.25672 17.3954C8.18782 17.3954 7.12939 17.1848 6.14186 16.7758C5.15432 16.3667 4.25703 15.7672 3.5012 15.0113C2.74538 14.2555 2.14582 13.3582 1.73677 12.3707C1.32772 11.3831 1.11719 10.3247 1.11719 9.25582C1.11719 7.09708 1.97474 5.02675 3.5012 3.50029C5.02766 1.97384 7.09798 1.11628 9.25672 1.11628C11.4155 1.11628 13.4858 1.97384 15.0122 3.50029C16.5387 5.02675 17.3963 7.09708 17.3963 9.25582Z"
-                stroke="#212121"
-                strokeWidth="2"
-                strokeLinecap="round"
-              />
-            </svg>
-          </button>
-        </div>
-        <button className="bg-customBlack rounded-full p-4">
+      <div className="gap-2 flex items-center md:gap-4">
+        <button className="p-3 bg-customLightGray rounded-full text-customDarkGray md:p-4">
+          <svg
+            width="18"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M22.0474 22.0465L17.9777 17.9767M17.3963 9.25582C17.3963 10.3247 17.1857 11.3831 16.7767 12.3707C16.3676 13.3582 15.7681 14.2555 15.0122 15.0113C14.2564 15.7672 13.3591 16.3667 12.3716 16.7758C11.3841 17.1848 10.3256 17.3954 9.25672 17.3954C8.18782 17.3954 7.12939 17.1848 6.14186 16.7758C5.15432 16.3667 4.25703 15.7672 3.5012 15.0113C2.74538 14.2555 2.14582 13.3582 1.73677 12.3707C1.32772 11.3831 1.11719 10.3247 1.11719 9.25582C1.11719 7.09708 1.97474 5.02675 3.5012 3.50029C5.02766 1.97384 7.09798 1.11628 9.25672 1.11628C11.4155 1.11628 13.4858 1.97384 15.0122 3.50029C16.5387 5.02675 17.3963 7.09708 17.3963 9.25582Z"
+              stroke="#212121"
+              strokeWidth="2"
+              strokeLinecap="round"
+            />
+          </svg>
+        </button>
+        <button className="p-3 bg-customBlack rounded-full md:p-4">
           <svg
             width="18"
             height="20"
@@ -49,6 +55,10 @@ const Header = () => {
             />
           </svg>
         </button>
+        <button onClick={toggleMenu} className="block md:hidden">
+          {isOpen ? <X size={28} /> : <Menu size={28} />}
+        </button>
+        {isOpen && <BurgerOpenedMenu closeMenu={closeMenu} />}
       </div>
     </div>
   );

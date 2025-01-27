@@ -1,20 +1,34 @@
 import { NavLink } from "react-router-dom";
 
-const Nav = () => {
+const Nav = ({ isBurgerMenu, closeMenu }) => {
   return (
     <nav className="flex items-center justify-center">
-      <ul className="flex gap-14 text-custom-32 uppercase">
+      <ul
+        className={`${
+          isBurgerMenu
+            ? "flex flex-col gap-8 "
+            : "hidden hidden md:flex gap-4 lg:gap-14"
+        } text-2xl uppercase`}
+      >
         <li className="hover:font-bold transition-all duration-200">
-          <NavLink to="/">Home</NavLink>
+          <NavLink to="/" onClick={closeMenu}>
+            Home
+          </NavLink>
         </li>
         <li className="hover:font-bold transition-all duration-200">
-          <NavLink to="/recipes">Recipes</NavLink>
+          <NavLink to="/recipes" onClick={closeMenu}>
+            Recipes
+          </NavLink>
         </li>
         <li className="hover:font-bold transition-all duration-200 ">
-          <NavLink to="/favorites">Favorites</NavLink>
+          <NavLink to="/favorites" onClick={closeMenu}>
+            Favorites
+          </NavLink>
         </li>
         <li className="hover:font-bold transition-all duration-200">
-          <NavLink to="/contact">Contact</NavLink>
+          <NavLink to="/contact" onClick={closeMenu}>
+            Contact
+          </NavLink>
         </li>
       </ul>
     </nav>

@@ -13,9 +13,6 @@ export default {
         customDarkGray: "#868686",
         customLightGray: "#F7F7F7",
       },
-      fontSize: {
-        "custom-32": "2rem",
-      },
     },
   },
   plugins: [],

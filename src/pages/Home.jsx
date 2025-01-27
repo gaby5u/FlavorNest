@@ -2,20 +2,20 @@ import React from "react";
 
 const Home = () => {
   return (
-    <div className="text-customBlack w-full bg-[url('../assets/home-bg-img.png')] bg-cover bg-center flex flex-col justify-between px-20 py-32 rounded-[35px] h-[95%]">
+    <div className="text-customBlack w-full bg-[url('../assets/home-bg-img.png')] bg-cover bg-no-repeat bg-center flex flex-col justify-between rounded-[35px] px-4 py-32 h-[70%] sm:h-[80%] sm:px-8 md:px-20 md:h-[90%]">
       <div>
-        <h1 className="text-white text-8xl font-bold font-krub max-w-[800px] leading-[8rem]">
+        <h1 className="text-white font-bold font-krub text-4xl leading-[3rem] max-w-[400px] md:text-6xl md:max-w-[600px] md:leading-[5rem] xl:leading-[8rem] xl:max-w-[800px] xl:text-8xl">
           Your guide to <span className="text-customOrange">Deliciousness</span>
         </h1>
-        <p className="font-krub text-custom-32 text-customLightGray max-w-[800px] my-8">
+        <p className="font-krub text-customLightGray max-w-[350px] my-8 md:text-xl md:max-w-[500px] xl:text-2xl xl:max-w-[700px]">
           Simplify cooking while unlocking a treasure trove of delicious
-          recipes.
+          recipes, making meal prep easier and more enjoyable.
         </p>
       </div>
-      <div className="text-xl flex items-center gap-8">
-        <button className="bg-customLightGray rounded-full px-8 py-4 relative min-w-[300px] text-left">
+      <div className="flex flex-wrap items-center text-sm gap-4 md:text-xl gap-8">
+        <button className="bg-customLightGray rounded-full px-8 py-4 relative text-left min-w-[200px] md:min-w-[300px]">
           Find Recipes
-          <div className="flex justify-center items-center w-[3.4rem] h-[3.4rem] bg-customBlack absolute top-[50%] -translate-y-1/2 right-[0.5rem] rounded-full">
+          <div className="flex justify-center items-center w-[2.4rem] h-[2.4rem] bg-customBlack absolute top-[50%] -translate-y-1/2 right-[0.5rem] rounded-full md:w-[3.4rem] h-[3.4rem]">
             <svg
               width="24"
               height="24"
@@ -37,7 +37,7 @@ const Home = () => {
             </svg>
           </div>
         </button>
-        <button className="bg-customBlack text-white px-8 py-4 rounded-full min-w-[300px]">
+        <button className="bg-customBlack text-white px-8 py-4 rounded-full min-w-[200px] md:min-w-[300px]">
           Explore Top Picks
         </button>
       </div>
