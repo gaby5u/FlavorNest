@@ -1,10 +1,13 @@
 import React from "react";
 import WhatWeOffer from "../components/introduction-home/WhatWeOffer";
+import FavRecipe from "../components/FavRecipe";
+
+import image from "../assets/recipe.jpg";
 
 const Home = () => {
   return (
-    <>
-      <div className="text-customBlack w-full bg-[url('../assets/home-bg-img.png')] bg-cover bg-no-repeat bg-center flex flex-col justify-between rounded-[35px] px-4 py-32 h-[70%] sm:h-[80%] sm:px-8 md:px-20 md:h-[94%]">
+    <div className="text-customBlack">
+      <div className="w-full bg-[url('../assets/home-bg-img.png')] bg-cover bg-no-repeat bg-center flex flex-col justify-between rounded-[35px] px-4 py-32 h-[70%] sm:h-[80%] sm:px-8 md:px-20 md:h-[94%]">
         <div>
           <h1 className="text-white font-bold font-krub text-4xl leading-[3rem] max-w-[400px] md:text-6xl md:max-w-[600px] md:leading-[5rem] xl:leading-[8rem] xl:max-w-[800px] xl:text-8xl">
             Your guide to{" "}
@@ -45,7 +48,7 @@ const Home = () => {
           </button>
         </div>
       </div>
-      <div className="font-krub flex flex-col jusitfy-center bg-customLightGray rounded-[35px] gap-8 my-4 px-4 py-4 sm:px-8 py-4 lg:flex-row md:px-16 py-8 xl:gap-16">
+      <div className="font-krub flex flex-col jusitfy-center bg-customLightGray rounded-[35px] gap-8 mt-4 px-4 py-4 sm:px-8 py-4 lg:flex-row md:px-16 py-8 xl:gap-16">
         <WhatWeOffer
           icon={
             <svg
@@ -64,67 +67,46 @@ const Home = () => {
           title="Find Recipes"
           description="Every feature is tailored to make your cooking journey effortless and enjoyable"
         />
-        <WhatWeOffer
-          icon={
-            <svg
-              width="24"
-              height="20"
-              viewBox="0 0 24 20"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M8.25 3.5625V0.5625C8.25 0.413316 8.30927 0.270242 8.41475 0.164752C8.52024 0.0592632 8.66332 0 8.8125 0C8.96169 0 9.10476 0.0592632 9.21025 0.164752C9.31574 0.270242 9.375 0.413316 9.375 0.5625V3.5625C9.375 3.71168 9.31574 3.85476 9.21025 3.96025C9.10476 4.06574 8.96169 4.125 8.8125 4.125C8.66332 4.125 8.52024 4.06574 8.41475 3.96025C8.30927 3.85476 8.25 3.71168 8.25 3.5625ZM11.8125 4.125C11.9617 4.125 12.1048 4.06574 12.2102 3.96025C12.3157 3.85476 12.375 3.71168 12.375 3.5625V0.5625C12.375 0.413316 12.3157 0.270242 12.2102 0.164752C12.1048 0.0592632 11.9617 0 11.8125 0C11.6633 0 11.5202 0.0592632 11.4148 0.164752C11.3093 0.270242 11.25 0.413316 11.25 0.5625V3.5625C11.25 3.71168 11.3093 3.85476 11.4148 3.96025C11.5202 4.06574 11.6633 4.125 11.8125 4.125ZM14.8125 4.125C14.9617 4.125 15.1048 4.06574 15.2102 3.96025C15.3157 3.85476 15.375 3.71168 15.375 3.5625V0.5625C15.375 0.413316 15.3157 0.270242 15.2102 0.164752C15.1048 0.0592632 14.9617 0 14.8125 0C14.6633 0 14.5202 0.0592632 14.4148 0.164752C14.3093 0.270242 14.25 0.413316 14.25 0.5625V3.5625C14.25 3.71168 14.3093 3.85476 14.4148 3.96025C14.5202 4.06574 14.6633 4.125 14.8125 4.125ZM23.4 8.5125L20.625 10.5938V16.3125C20.625 17.0584 20.3287 17.7738 19.8012 18.3012C19.2738 18.8287 18.5584 19.125 17.8125 19.125H5.8125C5.06658 19.125 4.35121 18.8287 3.82376 18.3012C3.29632 17.7738 3 17.0584 3 16.3125V10.5938L0.225002 8.5125C0.105655 8.42299 0.0267535 8.28973 0.00565571 8.14205C-0.0154421 7.99436 0.0229917 7.84435 0.112502 7.725C0.202013 7.60565 0.335268 7.52675 0.482953 7.50565C0.630638 7.48456 0.780655 7.52299 0.900002 7.6125L3 9.1875V6.5625C3 6.41332 3.05926 6.27024 3.16475 6.16475C3.27024 6.05926 3.41332 6 3.5625 6H20.0625C20.2117 6 20.3548 6.05926 20.4602 6.16475C20.5657 6.27024 20.625 6.41332 20.625 6.5625V9.1875L22.725 7.6125C22.8443 7.52299 22.9944 7.48456 23.142 7.50565C23.2897 7.52675 23.423 7.60565 23.5125 7.725C23.602 7.84435 23.6404 7.99436 23.6193 8.14205C23.5982 8.28973 23.5194 8.42299 23.4 8.5125ZM19.5 7.125H4.125V16.3125C4.125 16.7601 4.30279 17.1893 4.61926 17.5057C4.93573 17.8222 5.36495 18 5.8125 18H17.8125C18.2601 18 18.6893 17.8222 19.0057 17.5057C19.3222 17.1893 19.5 16.7601 19.5 16.3125V7.125Z"
-                fill="black"
-              />
-            </svg>
-          }
-          title="Diverse Recipes"
-          description="From traditional dishes to modern twists, find recipes that suit your cravings"
-        />
-        <WhatWeOffer
-          icon={
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g clipPath="url(#clip0_23_134)">
-                <path
-                  d="M11.9997 1.5C10.0548 1.5 8.18956 2.27262 6.81429 3.64788C5.43902 5.02315 4.66641 6.88841 4.66641 8.83333C4.65524 9.89911 4.88304 10.9538 5.33307 11.92C5.55567 12.3315 5.8051 12.7279 6.07974 13.1067C6.61378 13.8225 7.06133 14.599 7.41307 15.42C7.65503 16.289 7.78717 17.1848 7.80641 18.0867H9.13974C9.11904 17.0283 8.95991 15.9771 8.66641 14.96C8.28138 14.0319 7.78436 13.1542 7.18641 12.3467C6.94471 12.0175 6.72213 11.6747 6.51974 11.32C6.16155 10.5361 5.98385 9.68174 5.99974 8.82C5.99974 7.22251 6.63434 5.69045 7.76393 4.56086C8.89353 3.43127 10.4256 2.79667 12.0231 2.79667C13.6206 2.79667 15.1526 3.43127 16.2822 4.56086C17.4118 5.69045 18.0464 7.22251 18.0464 8.82C18.0476 9.69033 17.8516 10.5496 17.4731 11.3333C17.2707 11.688 17.0481 12.0308 16.8064 12.36C16.2117 13.1637 15.717 14.0368 15.3331 14.96C15.0384 15.9814 14.8793 17.0371 14.8597 18.1H16.1931C16.2123 17.1982 16.3444 16.3023 16.5864 15.4333C16.9381 14.6124 17.3857 13.8359 17.9197 13.12C18.1954 12.7326 18.4448 12.3273 18.6664 11.9067C19.1164 10.9405 19.3442 9.88577 19.3331 8.82C19.3295 6.87739 18.5554 5.01555 17.1805 3.64317C15.8056 2.27078 13.9424 1.5 11.9997 1.5Z"
-                  fill="black"
-                />
-                <path
-                  d="M12.4193 10.34C12.3194 10.2402 12.1839 10.1842 12.0427 10.1842C11.9015 10.1842 11.766 10.2402 11.666 10.34L9.66602 12.34L11.5727 14.4266V18.12H12.666V14L11.1727 12.3666L12.4327 11.1066C12.4832 11.056 12.5231 10.9957 12.5499 10.9294C12.5767 10.863 12.5898 10.792 12.5886 10.7205C12.5873 10.6489 12.5717 10.5784 12.5426 10.513C12.5136 10.4476 12.4716 10.3888 12.4193 10.34Z"
-                  fill="black"
-                />
-                <path
-                  d="M15.9057 19.4333H8.0724C7.93095 19.4333 7.79529 19.4895 7.69527 19.5896C7.59525 19.6896 7.53906 19.8252 7.53906 19.9667C7.53906 20.1081 7.59525 20.2438 7.69527 20.3438C7.79529 20.4438 7.93095 20.5 8.0724 20.5H15.9057C16.0472 20.5 16.1828 20.4438 16.2829 20.3438C16.3829 20.2438 16.4391 20.1081 16.4391 19.9667C16.4391 19.8252 16.3829 19.6896 16.2829 19.5896C16.1828 19.4895 16.0472 19.4333 15.9057 19.4333Z"
-                  fill="black"
-                />
-                <path
-                  d="M14.6674 21.4333H9.33411C9.19267 21.4333 9.05701 21.4895 8.95699 21.5896C8.85697 21.6896 8.80078 21.8252 8.80078 21.9667C8.80078 22.1081 8.85697 22.2438 8.95699 22.3438C9.05701 22.4438 9.19267 22.5 9.33411 22.5H14.6674C14.8089 22.5 14.9446 22.4438 15.0446 22.3438C15.1446 22.2438 15.2008 22.1081 15.2008 21.9667C15.2008 21.8252 15.1446 21.6896 15.0446 21.5896C14.9446 21.4895 14.8089 21.4333 14.6674 21.4333Z"
-                  fill="black"
-                />
-                <path
-                  d="M11.546 7.25997L9.726 9.07997C9.63407 9.18142 9.58468 9.31434 9.58805 9.45121C9.59142 9.58807 9.64729 9.71839 9.7441 9.8152C9.84091 9.91201 9.97123 9.96788 10.1081 9.97125C10.245 9.97462 10.3779 9.92523 10.4793 9.8333L12.2993 7.99997C12.3529 7.95146 12.396 7.89258 12.4261 7.82689C12.4562 7.76121 12.4726 7.6901 12.4744 7.61787C12.4762 7.54565 12.4633 7.47381 12.4364 7.40673C12.4096 7.33964 12.3694 7.27871 12.3183 7.22762C12.2673 7.17653 12.2063 7.13636 12.1392 7.10953C12.0722 7.08271 12.0003 7.06979 11.9281 7.07157C11.8559 7.07335 11.7848 7.08979 11.7191 7.11988C11.6534 7.14997 11.5945 7.1931 11.546 7.24664V7.25997Z"
-                  fill="black"
-                />
-              </g>
-              <defs>
-                <clipPath id="clip0_23_134">
-                  <rect width="24" height="24" fill="white" />
-                </clipPath>
-              </defs>
-            </svg>
-          }
-          title="Inspiration for All"
-          description="Unleash your inner chef with recipes crafted for every skill level"
-        />
       </div>
-    </>
+      <div className="my-16 font-krub">
+        <h1 className="text-4xl font-bold text-center md:text-6xl">
+          Our Best <span className="text-customOrange">Recipes</span>
+        </h1>
+        <p className="text-center text-customDarkGray m-4 md:text-xl xl:text-2xl">
+          Here's what's popular on cooking right now
+        </p>
+        <div className="flex flex-wrap justify-center items-center gap-8">
+          <FavRecipe
+            image={image}
+            title="Pasta Tuttanesca"
+            description="From traditional dishes to modern twists, find recipes that suit your cravings"
+            timing="45 min"
+            rating="4.5"
+          />
+          <FavRecipe
+            image={image}
+            title="Pasta Tuttanesca"
+            description="From traditional dishes to modern twists, find recipes that suit your cravings"
+            timing="45 min"
+            rating="4.5"
+          />
+          <FavRecipe
+            image={image}
+            title="Pasta Tuttanesca"
+            description="From traditional dishes to modern twists, find recipes that suit your cravings"
+            timing="45 min"
+            rating="4.5"
+          />
+          <FavRecipe
+            image={image}
+            title="Pasta Tuttanesca"
+            description="From traditional dishes to modern twists, find recipes that suit your cravings"
+            timing="45 min"
+            rating="4.5"
+          />
+        </div>
+      </div>
+    </div>
   );
 };
 
