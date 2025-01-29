@@ -5,7 +5,8 @@ import FavRecipe from "../components/FavRecipe";
 import favImage from "../assets/recipe.jpg";
 import aboutImg from "../assets/img-1.jpg";
 import Heading1 from "../components/Heading1";
-import AboutUsMini from "../components/AboutUsMini";
+import AboutUsMini from "../components/about-us-home/AboutUsMini";
+import FactAboutUs from "../components/about-us-home/FactAboutUs";
 
 const Home = () => {
   return (
@@ -130,7 +131,7 @@ const Home = () => {
           description="Unleash your inner chef with recipes crafted for every skill level"
         />
       </div>
-      <div className="font-krub my-8 xl:my-16">
+      <div className="font-krub my-4 sm:my-8 xl:my-16">
         <Heading1
           title="Our Best"
           highlight="Recipes"
@@ -175,7 +176,7 @@ const Home = () => {
           highlight="Culinary"
         />
       </div>
-      <div className="font-krub flex flex-wrap-reverse items-start justify-between gap-8 my-4 sm:my-8 custom1400px:flex-nowrap xl:items-stretch">
+      <div className="font-krub flex flex-wrap-reverse items-start justify-between gap-4 my-4 sm:my-8 gap-8 custom1400px:flex-nowrap xl:items-stretch">
         <img
           src={aboutImg}
           alt="food"
@@ -316,6 +317,15 @@ const Home = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="font-krub flex flex-col items-center justify-between bg-customLightGray rounded-[35px] gap-4 my-4 p-4 sm:my-8 px-8 sm:flex-row sm:items-start md:text-xl md:px-20 py-8 xl:text-2xl">
+        <FactAboutUs title="1 Million+" description="Registered Users" />
+        <FactAboutUs title="5,000+" description="Recipes" />
+        <FactAboutUs title="98%" description="User Satisfaction Rate" />
+        <FactAboutUs
+          title="10,000+"
+          description="Officialy Published Recipes"
+        />
       </div>
     </div>
   );
