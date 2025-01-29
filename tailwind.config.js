@@ -13,6 +13,9 @@ export default {
         customDarkGray: "#868686",
         customLightGray: "#F7F7F7",
       },
+      screens: {
+        custom1400px: "1300px",
+      },
     },
   },
   plugins: [],
