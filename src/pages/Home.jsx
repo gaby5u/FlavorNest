@@ -329,7 +329,7 @@ const Home = () => {
           description="Officialy Published Recipes"
         />
       </div>
-      <div className="font-krub px-2 my-12 md:px-20 xl:my-16">
+      <div className="font-krub px-2 my-2 sm:my-4 md:px-20 xl:my-8">
         <Heading1
           title="Popular Recipes Today"
           highlight="Recipes"
@@ -337,6 +337,13 @@ const Home = () => {
           className="text-start"
         />
         <Slider />
+      </div>
+      <div className="font-krub relative bg-[url('../assets/chicken-gyoza.jpg')] bg-center bg-no-repeat bg-cover w-full rounded-[35px] px-4 pt-32 pb-8 sm:px-8 md:px-20 md:pt-64 lg:pt-96">
+        <div className="absolute inset-0 bg-black/40 rounded-[35px]"></div>
+        <Heading1
+          title="Make Cooking Much Easier with Our Recipes"
+          className="relative text-white text-start max-w-[700px]"
+        />
       </div>
     </div>
   );
