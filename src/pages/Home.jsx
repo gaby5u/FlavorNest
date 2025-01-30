@@ -4,9 +4,11 @@ import FavRecipe from "../components/FavRecipe";
 
 import favImage from "../assets/recipe.jpg";
 import aboutImg from "../assets/img-1.jpg";
+
 import Heading1 from "../components/Heading1";
 import AboutUsMini from "../components/about-us-home/AboutUsMini";
 import FactAboutUs from "../components/about-us-home/FactAboutUs";
+import Slider from "../components/popular-recipe/Slider";
 
 const Home = () => {
   return (
@@ -131,7 +133,7 @@ const Home = () => {
           description="Unleash your inner chef with recipes crafted for every skill level"
         />
       </div>
-      <div className="font-krub my-4 sm:my-8 xl:my-16">
+      <div className="font-krub my-12 sm:my-8 xl:my-16">
         <Heading1
           title="Our Best"
           highlight="Recipes"
@@ -326,6 +328,15 @@ const Home = () => {
           title="10,000+"
           description="Officialy Published Recipes"
         />
+      </div>
+      <div className="font-krub px-2 my-12 md:px-20 xl:my-16">
+        <Heading1
+          title="Popular Recipes Today"
+          highlight="Recipes"
+          position="middle"
+          className="text-start"
+        />
+        <Slider />
       </div>
     </div>
   );

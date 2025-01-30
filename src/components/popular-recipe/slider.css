@@ -1,0 +1,21 @@
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  color: #fff;
+  font-weight: bold;
+  background-color: #212121;
+  border-radius: 50%;
+  font-size: 1rem;
+  padding: 1rem;
+}
+
+@media screen and (min-width: 1280px) {
+  .swiper-slide-next .popular-recipe {
+    transform: scale(1.06);
+    transition: all 1s ease;
+    background-color: #ff9f0ead;
+  }
+
+  .swiper-slide-next p {
+    color: #fff;
+  }
+}
