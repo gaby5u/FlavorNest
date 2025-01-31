@@ -13,7 +13,7 @@ import Slider from "../components/popular-recipe/Slider";
 const Home = () => {
   return (
     <div className="text-customBlack">
-      <div className="w-full bg-[url('../assets/home-bg-img.png')] bg-cover bg-no-repeat bg-center flex flex-col justify-between rounded-[35px] px-4 py-32 h-[70%] sm:h-[80%] sm:px-8 md:px-20 md:h-[94%]">
+      <div className="w-full bg-[url('../assets/home-bg-img.png')] bg-cover bg-no-repeat bg-center flex flex-col justify-between rounded-[35px] mt-16 px-4 py-32 h-[70%] sm:h-[80%] sm:px-8 md:px-20 md:h-[94%]">
         <div>
           <h1 className="text-white font-bold font-krub text-4xl leading-[3rem] max-w-[400px] md:text-6xl md:max-w-[600px] md:leading-[5rem] xl:leading-[8rem] xl:max-w-[800px] xl:text-8xl">
             Your guide to

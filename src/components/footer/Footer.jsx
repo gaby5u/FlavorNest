@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div className="font-krub bg-customBlack text-white rounded-[35px] my-4 px-4 pt-16 pb-8 sm:px-8 sm:my-8 md:px-20">
+    <footer className="font-krub bg-customBlack text-white rounded-[35px] mt-4 mb-0 px-4 pt-16 pb-8 sm:px-8 sm:mt-8 md:px-20">
       <div className="flex flex-col items-start justify-between gap-2 sm:flex-row sm:gap-8">
         <div>
           <NavLink
@@ -34,14 +34,14 @@ const Footer = () => {
           <input
             type="text"
             placeholder="Enter your email..."
-            className="bg-transparent border-b-2 border-customDarkGray w-full py-2 md:max-w-[400px]"
+            className="bg-transparent border-b-2 border-customDarkGray w-full focus-visible:outline-none py-2 md:max-w-[400px]"
           />
           <button className="bg-customOrange text-white py-2 px-4 rounded-full">
             Subscribe
           </button>
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 

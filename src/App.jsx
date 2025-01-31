@@ -11,7 +11,7 @@ import NotFound from "./pages/NotFound";
 
 function App() {
   return (
-    <div className="p-4 h-screen md:p-10">
+    <div className="p-4 min-h-screen md:p-10">
       <Router>
         <Header />
         <Routes>
