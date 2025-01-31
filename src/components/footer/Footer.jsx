@@ -1,40 +1,46 @@
-import React from "react";
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div>
-      Footer Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
-      autem delectus, vitae beatae aliquam dignissimos quis quae temporibus
-      voluptatum rerum modi maiores rem asperiores alias explicabo architecto,
-      recusandae amet! Quod quisquam harum consequuntur officia, similique qui
-      maxime ratione voluptates odit velit possimus expedita sint nobis tempore
-      nulla distinctio, recusandae ex optio saepe sed. Culpa quos molestias,
-      dicta sunt consectetur neque ullam natus aliquam? Similique, ratione
-      architecto aliquam ut corporis eaque minima incidunt nisi ipsa praesentium
-      in nulla iure blanditiis inventore delectus debitis hic reprehenderit
-      dolores quos natus doloribus nihil unde dolorum? Asperiores ipsum
-      praesentium quidem beatae voluptas sunt esse quisquam. Lorem ipsum dolor
-      sit, amet consectetur adipisicing elit. Ea neque distinctio molestias
-      sunt. Accusantium animi ipsum porro dolores, facilis nisi aliquam fuga
-      quidem libero suscipit dolorem non. Suscipit, cumque et cum, alias
-      mollitia pariatur ab quasi ratione error molestias nisi. Accusantium
-      molestiae explicabo, atque animi debitis culpa est maiores reprehenderit,
-      iste modi natus nostrum repellendus ullam aut numquam! Natus dolor ducimus
-      consectetur asperiores placeat quisquam. Necessitatibus possimus inventore
-      tenetur culpa vitae, rem voluptatum dolores voluptatem dolorum, ipsa
-      officiis cum dolore magni suscipit modi nam corrupti voluptas illo
-      repellendus soluta enim accusamus quisquam quas quod! Possimus illo,
-      cumque, enim assumenda mollitia commodi dicta nihil eos fuga, repellendus
-      nemo voluptates soluta ratione? Ullam, error aut! Voluptatem est vel rerum
-      dolores doloremque sint repellendus similique facere deserunt repudiandae
-      magni ad veritatis accusamus, eum, error cupiditate commodi! At amet
-      praesentium, in odit asperiores aut unde voluptatum id saepe,
-      exercitationem adipisci hic porro? Excepturi, fuga! Sit hic minima sint
-      impedit quam quae labore voluptatem explicabo minus. Asperiores autem,
-      quis nulla blanditiis numquam enim, ducimus, animi porro distinctio
-      perspiciatis ea adipisci saepe nostrum eveniet aperiam. Eveniet, ut ipsa
-      eaque quibusdam odio, beatae incidunt error explicabo modi in saepe
-      corrupti similique hic nesciunt repellat est cumque maiores?
+    <div className="font-krub bg-customBlack text-white rounded-[35px] my-4 px-4 pt-16 pb-8 sm:px-8 sm:my-8 md:px-20">
+      <div className="flex flex-col items-start justify-between gap-2 sm:flex-row sm:gap-8">
+        <div>
+          <NavLink
+            to="/"
+            className="uppercase text-4xl font-bold md:text-6xl xl:text-8xl"
+          >
+            Flavor<span className="text-customOrange">Nest</span>
+          </NavLink>
+          <p className="text-customLightGray my-4 max-w-full md:max-w-[800px] md:text-xl xl:text-2xl">
+            Ready to start cooking? Browse our recipe collection today and
+            discover new, delicious ways to enjoy food.
+          </p>
+        </div>
+        <ul className="flex items-center justify-end md:text-xl font-bold gap-4 my-2 sm:my-4 md:flex-col md:gap-8 lg:flex-row xl:text-2xl">
+          <li>
+            <NavLink to="/recipes">Recipes</NavLink>
+          </li>
+          <li>
+            <NavLink to="/favorites">Favorites</NavLink>
+          </li>
+          <li>
+            <NavLink to="/contact">Contact</NavLink>
+          </li>
+        </ul>
+      </div>
+      <div className="flex flex-col-reverse gap-4 text-customDarkGray mt-16 md:flex-row items-center justify-between">
+        <p className="my-4">&#169;FlavorNest. All Rights Reserved</p>
+        <div className="flex items-center justify-end gap-4 w-full md:w-1/2">
+          <input
+            type="text"
+            placeholder="Enter your email..."
+            className="bg-transparent border-b-2 border-customDarkGray w-full py-2 md:max-w-[400px]"
+          />
+          <button className="bg-customOrange text-white py-2 px-4 rounded-full">
+            Subscribe
+          </button>
+        </div>
+      </div>
     </div>
   );
 };
