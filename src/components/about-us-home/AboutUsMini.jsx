@@ -1,5 +1,3 @@
-import React from "react";
-
 const AboutUsMini = ({ icon, title }) => {
   return (
     <div className="bg-white rounded-[25px] flex items-center gap-4 p-4">

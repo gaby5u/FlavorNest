@@ -8,14 +8,16 @@
 }
 
 .home-1-cta-btn,
-.home-2-cta-btn {
+.home-2-cta-btn,
+.black-btn {
   transition: all 0.5s ease;
   overflow: hidden;
   z-index: 2;
 }
 
 .home-1-cta-btn::before,
-.home-2-cta-btn::before {
+.home-2-cta-btn::before,
+.black-btn::before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -30,13 +32,15 @@
 }
 
 .home-1-cta-btn:hover::before,
-.home-2-cta-btn:hover::before {
+.home-2-cta-btn:hover::before,
+.black-btn:hover::before {
   width: 100%;
 }
 
 .home-1-cta-btn:hover svg,
 .search-btn:hover,
-.login-btn:hover {
+.login-btn:hover,
+.black-btn:hover svg {
   animation: rotateCircle 0.5s forwards;
 }
 
