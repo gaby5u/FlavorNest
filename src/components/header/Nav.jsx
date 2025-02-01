@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 
-import "./NavHover.css";
+import "./nav-hover.css";
 
 const Nav = ({ isBurgerMenu, closeMenu }) => {
   return (
@@ -34,7 +34,7 @@ const Nav = ({ isBurgerMenu, closeMenu }) => {
           <NavLink
             to="/favorites"
             className={({ isActive }) => (isActive ? "active-link" : "link")}
-            nClick={closeMenu}
+            onClick={closeMenu}
           >
             Favorites
           </NavLink>

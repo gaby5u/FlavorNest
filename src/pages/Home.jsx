@@ -4,6 +4,7 @@ import FavRecipe from "../components/FavRecipe";
 
 import favImage from "../assets/recipe.jpg";
 import aboutImg from "../assets/img-1.jpg";
+import "../styles/buttons-hover.css";
 
 import Heading1 from "../components/Heading1";
 import AboutUsMini from "../components/about-us-home/AboutUsMini";
@@ -25,9 +26,9 @@ const Home = () => {
           </p>
         </div>
         <div className="flex flex-wrap items-center text-sm gap-4 md:text-xl gap-8">
-          <button className="bg-customLightGray rounded-full px-8 py-4 relative text-left min-w-[200px] md:min-w-[300px]">
-            Find Recipes
-            <div className="flex justify-center items-center w-[2.4rem] h-[2.4rem] bg-customBlack absolute top-[50%] -translate-y-1/2 right-[0.5rem] rounded-full md:w-[3.4rem] md:h-[3.4rem]">
+          <button className="home-1-cta-btn bg-customLightGray rounded-full px-8 py-4 relative text-left min-w-[200px] md:min-w-[300px]">
+            <span>Find Recipes</span>
+            <div className="flex justify-center items-center w-[2.4rem] h-[2.4rem] bg-customBlack absolute top-[50%] -translate-y-1/2 right-[0.2rem] rounded-full md:w-[3.4rem] md:h-[3.4rem]">
               <svg
                 width="24"
                 height="24"
@@ -49,7 +50,7 @@ const Home = () => {
               </svg>
             </div>
           </button>
-          <button className="bg-customBlack text-white px-8 py-4 rounded-full min-w-[200px] md:min-w-[300px]">
+          <button className="home-2-cta-btn relative bg-customBlack text-white px-8 py-4 rounded-full min-w-[200px] md:min-w-[300px]">
             Explore Top Picks
           </button>
         </div>
