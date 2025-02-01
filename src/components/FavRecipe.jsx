@@ -2,9 +2,9 @@ import React from "react";
 
 const recipe = ({ image, title, description, timing, rating }) => {
   return (
-    <div className="bg-customLightGray rounded-[35px] max-w-full md:max-w-[300px] lg:max-w-[400px]">
+    <div className="bg-customLightGray rounded-[35px] max-w-full cursor-pointer border-2 border-customLightGray transition duration-200 hover:border-customOrange hover:scale-[1.02] md:max-w-[300px] lg:max-w-[400px]">
       <div className="relative">
-        <img src={image} alt={title} className="rounded-t-[35px] w-full" />
+        <img src={image} alt={title} className="rounded-t-[33px] w-full" />
         <div className="flex items-center justify-center rounded-full bg-white absolute top-2 right-2 w-[53px] h-[53px]">
           <svg
             className="cursor-pointer fill-none hover:fill-red-500 hover:stroke-transparent transition-all duration-700"
