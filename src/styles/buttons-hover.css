@@ -34,7 +34,9 @@
   width: 100%;
 }
 
-.home-1-cta-btn:hover svg {
+.home-1-cta-btn:hover svg,
+.search-btn:hover,
+.login-btn:hover {
   animation: rotateCircle 0.5s forwards;
 }
 

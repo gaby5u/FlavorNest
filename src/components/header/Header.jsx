@@ -5,6 +5,8 @@ import { useState } from "react";
 import Nav from "./Nav";
 import BurgerOpenedMenu from "./BurgerOpenedMenu";
 
+import "../../styles/buttons-hover.css";
+
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -25,7 +27,7 @@ const Header = () => {
       </h1>
       <Nav />
       <div className="gap-2 flex items-center md:gap-4">
-        <button className="p-3 bg-customLightGray rounded-full text-customDarkGray md:p-4">
+        <button className="search-btn p-3 bg-customLightGray rounded-full text-customDarkGray md:p-4">
           <svg
             width="18"
             height="20"
@@ -41,7 +43,7 @@ const Header = () => {
             />
           </svg>
         </button>
-        <button className="p-3 bg-customBlack rounded-full md:p-4">
+        <button className="login-btn p-3 bg-customBlack rounded-full md:p-4">
           <svg
             width="18"
             height="20"
