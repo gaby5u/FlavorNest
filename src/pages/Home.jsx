@@ -17,7 +17,7 @@ const Home = () => {
         <div>
           <h1 className="text-white font-bold font-krub text-4xl leading-[3rem] max-w-[400px] md:text-6xl md:max-w-[600px] md:leading-[5rem] xl:leading-[8rem] xl:max-w-[800px] xl:text-8xl">
             Your guide to
-            <span className="text-customOrange">Deliciousness</span>
+            <span className="text-customOrange"> Deliciousness</span>
           </h1>
           <p className="font-krub text-customLightGray max-w-[350px] my-8 md:text-xl md:max-w-[500px] xl:text-2xl xl:max-w-[700px]">
             Simplify cooking while unlocking a treasure trove of delicious

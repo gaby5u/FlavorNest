@@ -1,0 +1,31 @@
+.link,
+.active-link {
+  display: flex;
+  align-items: center;
+  transition: all 0.3s;
+}
+
+.link::before,
+.active-link::before {
+  content: "";
+  opacity: 0;
+  width: 7px;
+  height: 7px;
+  margin-right: 5px;
+  border-radius: 50%;
+  background-color: #ff9f0e;
+  transition: opacity 0.3s;
+}
+
+.active-link::before {
+  opacity: 1;
+}
+
+.link:hover,
+.active-link {
+  font-weight: bold;
+}
+
+.link:hover::before {
+  opacity: 1;
+}

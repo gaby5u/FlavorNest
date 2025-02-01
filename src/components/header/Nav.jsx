@@ -1,5 +1,7 @@
 import { NavLink } from "react-router-dom";
 
+import "./NavHover.css";
+
 const Nav = ({ isBurgerMenu, closeMenu }) => {
   return (
     <nav className="flex items-center justify-center">
@@ -10,23 +12,39 @@ const Nav = ({ isBurgerMenu, closeMenu }) => {
             : "hidden hidden md:flex gap-4 lg:gap-14"
         } text-2xl uppercase`}
       >
-        <li className="hover:font-bold transition-all duration-200">
-          <NavLink to="/" onClick={closeMenu}>
+        <li>
+          <NavLink
+            to="/"
+            className={({ isActive }) => (isActive ? "active-link" : "link")}
+            onClick={closeMenu}
+          >
             Home
           </NavLink>
         </li>
-        <li className="hover:font-bold transition-all duration-200">
-          <NavLink to="/recipes" onClick={closeMenu}>
+        <li>
+          <NavLink
+            to="/recipes"
+            className={({ isActive }) => (isActive ? "active-link" : "link")}
+            onClick={closeMenu}
+          >
             Recipes
           </NavLink>
         </li>
-        <li className="hover:font-bold transition-all duration-200 ">
-          <NavLink to="/favorites" onClick={closeMenu}>
+        <li>
+          <NavLink
+            to="/favorites"
+            className={({ isActive }) => (isActive ? "active-link" : "link")}
+            nClick={closeMenu}
+          >
             Favorites
           </NavLink>
         </li>
-        <li className="hover:font-bold transition-all duration-200">
-          <NavLink to="/contact" onClick={closeMenu}>
+        <li>
+          <NavLink
+            to="/contact"
+            className={({ isActive }) => (isActive ? "active-link" : "link")}
+            onClick={closeMenu}
+          >
             Contact
           </NavLink>
         </li>
