@@ -1,12 +1,16 @@
-.link,
-.active-link {
+.header-link,
+.active-link-header,
+.footer-link,
+.active-link-footer {
   display: flex;
   align-items: center;
   transition: all 0.3s;
 }
 
-.link::before,
-.active-link::before {
+.header-link::before,
+.active-link-header::before,
+.footer-link::before,
+.active-link-footer::before {
   content: "";
   opacity: 0;
   width: 7px;
@@ -17,15 +21,19 @@
   transition: opacity 0.3s;
 }
 
-.active-link::before {
+.active-link-header::before,
+.active-link-footer::before {
   opacity: 1;
 }
 
-.link:hover,
-.active-link {
+.header-link:hover,
+.active-link-header,
+.footer-link::before,
+.active-link-footer {
   font-weight: bold;
 }
 
-.link:hover::before {
+.header-link:hover::before,
+.footer-link:hover::before {
   opacity: 1;
 }

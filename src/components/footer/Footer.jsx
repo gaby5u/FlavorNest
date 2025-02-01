@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import "../header/nav-hover.css";
 
 const Footer = () => {
   return (
@@ -18,13 +19,34 @@ const Footer = () => {
         </div>
         <ul className="flex items-center justify-end md:text-xl font-bold gap-4 my-2 sm:my-4 md:flex-col md:gap-8 lg:flex-row xl:text-2xl">
           <li>
-            <NavLink to="/recipes">Recipes</NavLink>
+            <NavLink
+              to="/recipes"
+              className={({ isActive }) =>
+                isActive ? "active-link-footer" : "footer-link"
+              }
+            >
+              Recipes
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/favorites">Favorites</NavLink>
+            <NavLink
+              to="/favorites"
+              className={({ isActive }) =>
+                isActive ? "active-link-footer" : "footer-link"
+              }
+            >
+              Favorites
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/contact">Contact</NavLink>
+            <NavLink
+              to="/contact"
+              className={({ isActive }) =>
+                isActive ? "active-link-footer" : "footer-link"
+              }
+            >
+              Contact
+            </NavLink>
           </li>
         </ul>
       </div>

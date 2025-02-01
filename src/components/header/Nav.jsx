@@ -15,7 +15,9 @@ const Nav = ({ isBurgerMenu, closeMenu }) => {
         <li>
           <NavLink
             to="/"
-            className={({ isActive }) => (isActive ? "active-link" : "link")}
+            className={({ isActive }) =>
+              isActive ? "active-link-header" : "header-link"
+            }
             onClick={closeMenu}
           >
             Home
@@ -24,7 +26,9 @@ const Nav = ({ isBurgerMenu, closeMenu }) => {
         <li>
           <NavLink
             to="/recipes"
-            className={({ isActive }) => (isActive ? "active-link" : "link")}
+            className={({ isActive }) =>
+              isActive ? "active-link-header" : "header-link"
+            }
             onClick={closeMenu}
           >
             Recipes
@@ -33,7 +37,9 @@ const Nav = ({ isBurgerMenu, closeMenu }) => {
         <li>
           <NavLink
             to="/favorites"
-            className={({ isActive }) => (isActive ? "active-link" : "link")}
+            className={({ isActive }) =>
+              isActive ? "active-link-header" : "header-link"
+            }
             onClick={closeMenu}
           >
             Favorites
@@ -42,7 +48,9 @@ const Nav = ({ isBurgerMenu, closeMenu }) => {
         <li>
           <NavLink
             to="/contact"
-            className={({ isActive }) => (isActive ? "active-link" : "link")}
+            className={({ isActive }) =>
+              isActive ? "active-link-header" : "header-link"
+            }
             onClick={closeMenu}
           >
             Contact
