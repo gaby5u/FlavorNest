@@ -13,7 +13,7 @@ import Slider from "../components/popular-recipe/Slider";
 import GetRecipes from "../api/GetRecipes";
 
 const Home = () => {
-  const recipes = GetRecipes();
+  const bestRecipes = GetRecipes("Side");
 
   return (
     <div className="text-customBlack">
@@ -144,11 +144,11 @@ const Home = () => {
           description="Here's what's popular on cooking right now"
         />
         <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-8">
-          {recipes.slice(0, 12).map((recipe, index) => (
+          {bestRecipes.slice(0, 12).map((bestRecipe, index) => (
             <FavRecipe
               key={index}
-              image={recipe.strMealThumb}
-              title={recipe.strMeal}
+              image={bestRecipe.strMealThumb}
+              title={bestRecipe.strMeal}
             />
           ))}
         </div>
@@ -314,8 +314,8 @@ const Home = () => {
       </div>
       <div className="font-krub px-2 my-2 sm:my-4 md:px-20 xl:my-8">
         <Heading1
-          title="Popular Recipes Today"
-          highlight="Recipes"
+          title="Popular Seafood Recipes Today"
+          highlight="Seafood"
           position="middle"
           className="text-start"
         />

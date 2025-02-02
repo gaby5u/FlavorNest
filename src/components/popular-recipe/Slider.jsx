@@ -7,7 +7,11 @@ import { Navigation, Autoplay } from "swiper/modules";
 import PopularRecipe from "./PopularRecipe";
 import aboutImg from "../../assets/img-1.jpg";
 
+import GetRecipes from "../../api/GetRecipes";
+
 const Slider = () => {
+  const seafoodRecipes = GetRecipes("Seafood");
+
   return (
     <Swiper
       loop={true}
@@ -32,18 +36,14 @@ const Slider = () => {
       }}
       className="mySwiper py-2 sm:py-8"
     >
-      <SwiperSlide className="flex justify-center">
-        <PopularRecipe title="Spicy Vermicelli Noodles Salad" img={aboutImg} />
-      </SwiperSlide>
-      <SwiperSlide className="flex justify-center">
-        <PopularRecipe title="Spicy Vermicelli Noodles Salad" img={aboutImg} />
-      </SwiperSlide>
-      <SwiperSlide className="flex justify-center">
-        <PopularRecipe title="Spicy Vermicelli Noodles Salad" img={aboutImg} />
-      </SwiperSlide>
-      <SwiperSlide className="flex justify-center">
-        <PopularRecipe title="Spicy Vermicelli Noodles Salad" img={aboutImg} />
-      </SwiperSlide>
+      {seafoodRecipes.slice(0, 20).map((seafoodRecipe, index) => (
+        <SwiperSlide className="flex justify-center" key={index}>
+          <PopularRecipe
+            title={seafoodRecipe.strMeal}
+            img={seafoodRecipe.strMealThumb}
+          />
+        </SwiperSlide>
+      ))}
     </Swiper>
   );
 };
