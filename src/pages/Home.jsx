@@ -1,8 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import WhatWeOffer from "../components/introduction-home/WhatWeOffer";
 import FavRecipe from "../components/FavRecipe";
 
-import favImage from "../assets/recipe.jpg";
 import aboutImg from "../assets/img-1.jpg";
 import "../styles/buttons-hover.css";
 
@@ -11,7 +10,11 @@ import AboutUsMini from "../components/about-us-home/AboutUsMini";
 import FactAboutUs from "../components/about-us-home/FactAboutUs";
 import Slider from "../components/popular-recipe/Slider";
 
+import GetRecipes from "../api/GetRecipes";
+
 const Home = () => {
+  const recipes = GetRecipes();
+
   return (
     <div className="text-customBlack">
       <div className="w-full bg-[url('../assets/home-bg-img.png')] bg-cover bg-no-repeat bg-center flex flex-col justify-between rounded-[35px] mt-16 px-4 py-32 h-[70%] sm:h-[80%] sm:px-8 md:px-20 md:h-[94%]">
@@ -141,34 +144,13 @@ const Home = () => {
           description="Here's what's popular on cooking right now"
         />
         <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-8">
-          <FavRecipe
-            image={favImage}
-            title="Pasta Tuttanesca"
-            description="From traditional dishes to modern twists, find recipes that suit your cravings"
-            timing="45 min"
-            rating="4.5"
-          />
-          <FavRecipe
-            image={favImage}
-            title="Pasta Tuttanesca"
-            description="From traditional dishes to modern twists, find recipes that suit your cravings"
-            timing="45 min"
-            rating="4.5"
-          />
-          <FavRecipe
-            image={favImage}
-            title="Pasta Tuttanesca"
-            description="From traditional dishes to modern twists, find recipes that suit your cravings"
-            timing="45 min"
-            rating="4.5"
-          />
-          <FavRecipe
-            image={favImage}
-            title="Pasta Tuttanesca"
-            description="From traditional dishes to modern twists, find recipes that suit your cravings"
-            timing="45 min"
-            rating="4.5"
-          />
+          {recipes.slice(0, 12).map((recipe, index) => (
+            <FavRecipe
+              key={index}
+              image={recipe.strMealThumb}
+              title={recipe.strMeal}
+            />
+          ))}
         </div>
       </div>
       <div className="bg-[url('../assets/about-img.png')] bg-center bg-cover bg-no-repeat w-full rounded-[35px] px-4 py-16 sm:px-8 md:px-20">
