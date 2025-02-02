@@ -1,6 +1,17 @@
-const FavRecipe = ({ image, title }) => {
+import { useNavigate } from "react-router-dom";
+
+const FavRecipe = ({ recipeId, image, title }) => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate(`/recipe/${recipeId}`);
+  };
+
   return (
-    <div className="bg-customLightGray rounded-[35px] max-w-full cursor-pointer border-2 border-customLightGray transition duration-200 hover:border-customOrange hover:scale-[1.02] md:max-w-[300px] lg:max-w-[400px]">
+    <div
+      onClick={handleClick}
+      className="bg-customLightGray rounded-[35px] max-w-full cursor-pointer border-2 border-customLightGray transition duration-200 hover:border-customOrange hover:scale-[1.02] md:max-w-[300px] lg:max-w-[400px]"
+    >
       <div className="relative">
         <img src={image} alt={title} className="rounded-t-[33px] w-full" />
         <div className="flex items-center justify-center rounded-full bg-white absolute top-2 right-2 w-[53px] h-[53px]">

@@ -39,6 +39,7 @@ const Slider = () => {
       {seafoodRecipes.slice(0, 20).map((seafoodRecipe, index) => (
         <SwiperSlide className="flex justify-center" key={index}>
           <PopularRecipe
+            recipeId={seafoodRecipe.idMeal}
             title={seafoodRecipe.strMeal}
             img={seafoodRecipe.strMealThumb}
           />

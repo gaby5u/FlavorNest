@@ -4,6 +4,7 @@ import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 import Home from "./pages/Home";
 import Recipes from "./pages/Recipes";
+import Recipe from "./pages/Recipe";
 import Favorites from "./pages/Favorites";
 import Contact from "./pages/Contact";
 import Search from "./pages/Search";
@@ -17,6 +18,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/recipes" element={<Recipes />}></Route>
+          <Route path="/recipe/:id" element={<Recipe />}></Route>
           <Route path="/favorites" element={<Favorites />}></Route>
           <Route path="/contact" element={<Contact />}></Route>
           <Route path="/search" element={<Search />}></Route>

@@ -1,8 +1,18 @@
 import "../styles/buttons-hover.css";
+import { useNavigate } from "react-router-dom";
 
-const BlackButton = () => {
+const BlackButton = ({ recipeId }) => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate(`/recipe/${recipeId}`);
+  };
+
   return (
-    <button className="relative black-btn bg-customBlack w-full text-white rounded-full flex items-center justify-between gap-2 pl-4 pr-2 py-2 sm:pl-8">
+    <button
+      onClick={handleClick}
+      className="relative black-btn bg-customBlack w-full text-white rounded-full flex items-center justify-between gap-2 pl-4 pr-2 py-2 sm:pl-8"
+    >
       <span className="flex-1 text-start text-sm sm:text-xl">
         See Complete Recipe
       </span>
