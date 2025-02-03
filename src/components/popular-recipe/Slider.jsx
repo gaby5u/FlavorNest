@@ -5,7 +5,6 @@ import "./slider.css";
 import { Navigation, Autoplay } from "swiper/modules";
 
 import PopularRecipe from "./PopularRecipe";
-import aboutImg from "../../assets/img-1.jpg";
 
 import GetRecipes from "../../api/GetRecipes";
 

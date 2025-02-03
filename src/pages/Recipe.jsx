@@ -2,7 +2,8 @@ import { useParams } from "react-router-dom";
 
 const Recipe = () => {
   const { id } = useParams();
-  return <div className="">Recipe with id {id} cliked</div>;
+
+  return <div>Recipe</div>;
 };
 
 export default Recipe;
