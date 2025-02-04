@@ -1,10 +1,18 @@
+import { useState } from "react";
+
 import Heading1 from "../components/Heading1";
 import CategoryButton from "../components/CategoryButton";
+import FavRecipe from "../components/FavRecipe";
 import GetRecipesbyCategory from "../api/GetRecipesCategories";
 import GetRecipeIcon from "../functions/GetRecipeIcon";
 
 const Recipes = () => {
   const categories = GetRecipesbyCategory();
+  const [fetchedRecipes, setFetchedRecipes] = useState(null);
+
+  const handleRecipesFetched = (recipes) => {
+    setFetchedRecipes(recipes);
+  };
 
   return (
     <div>
@@ -21,9 +29,20 @@ const Recipes = () => {
         <div className="flex items-center justify-center gap-4 flex-wrap my-8">
           {categories.map((category, index) => (
             <CategoryButton
+              onRecipesFetched={handleRecipesFetched}
               key={index}
               icon={GetRecipeIcon(category.strCategory)}
               title={category.strCategory}
+            />
+          ))}
+        </div>
+        <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-8">
+          {fetchedRecipes?.map((fetchedRecipe, index) => (
+            <FavRecipe
+              key={index}
+              recipeId={fetchedRecipe.idMeal}
+              image={fetchedRecipe.strMealThumb}
+              title={fetchedRecipe.strMeal}
             />
           ))}
         </div>

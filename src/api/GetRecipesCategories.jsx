@@ -10,9 +10,8 @@ const GetRecipesbyCategory = () => {
           "https://www.themealdb.com/api/json/v1/1/list.php?c=list"
         );
         setRecipe(response.data.meals);
-        console.log(response.data.meals);
       } catch (error) {
-        console.log("Error fetching recipes by category:", error);
+        console.log("Error fetching categories:", error);
       }
     };
     fetchRecipeByCategory();
