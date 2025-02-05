@@ -28,9 +28,9 @@ const Recipes = () => {
 
   return (
     <div>
-      <div className="bg-[url('../assets/bg-recipe.png')] bg-center bg-cover bg-no-repeat w-full rounded-[35px] mt-16 px-4 py-32 sm:px-8 md:px-20">
+      <div className="bg-[url('../assets/bg-recipe.png')] bg-center bg-cover bg-no-repeat w-full rounded-[35px] mt-16 px-4 py-16 sm:px-8 md:px-20 md:py-32">
         <Heading1
-          className="text-start max-w-[500px]"
+          className="text-start max-w-[200px] custom400px:max-w-[400px] md:max-w-[500px]"
           title="Explore Culinary Insights"
           position="middle"
           highlight="Culinary"

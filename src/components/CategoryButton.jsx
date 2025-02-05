@@ -25,7 +25,7 @@ const CategoryButton = ({
         activeCategory === title
           ? "bg-customBlack text-white"
           : "bg-customLightGray"
-      } flex items-center justify-center gap-4 rounded-full font-semibold text-sm transition duration-300 px-10 py-2 hover:bg-customBlack hover:text-white md:text-xl`}
+      } flex items-center justify-center gap-4 rounded-full font-semibold text-sm transition duration-300 px-10 py-2 hover:bg-customBlack hover:text-white w-full custom400px:w-auto md:text-xl`}
     >
       {icon}
       <p>{title}</p>

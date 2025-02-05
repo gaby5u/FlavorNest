@@ -37,7 +37,7 @@ const Recipe = () => {
             </div>
           </div>
 
-          <div className="flex justify-between gap-2 bg-customLightGray w-full px-8 py-2 rounded-[25px] sm:px-16 sm:py-4 sm:gap-16">
+          <div className="flex justify-between gap-1 bg-customLightGray w-full px-4 py-2 rounded-[25px] sm:px-16 sm:py-4 sm:gap-16">
             <RecipeDetails type="Ingredients" recipe={recipe} />
             <RecipeDetails type="Measures" recipe={recipe} />
           </div>
