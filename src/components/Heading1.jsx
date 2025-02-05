@@ -2,7 +2,7 @@ import React from "react";
 
 const Heading1 = ({
   title,
-  highlight,
+  highlight = "",
   position = "end",
   description = "",
   className = "text-center",

@@ -36,7 +36,7 @@ const Recipes = () => {
           highlight="Culinary"
         />
       </div>
-      <div className="font-krub my-12 sm:my-8 xl:my-16">
+      <div className="font-krub my-4 sm:my-8 xl:my-16">
         <Heading1 title="What to Cook?" position="middle" highlight="Cook" />
         <div className="flex items-center justify-center gap-4 flex-wrap my-8">
           {categories.map((category, index) => (
