@@ -1,18 +1,31 @@
 import GetRecipesByCategory from "../api/GetRecipesByCategory";
 
-const CategoryButton = ({ icon, title, onRecipesFetched }) => {
+const CategoryButton = ({
+  icon,
+  title,
+  onRecipesFetched,
+  activeCategory,
+  onClick,
+}) => {
   const recipes = GetRecipesByCategory(title);
 
   const handleClick = () => {
     if (onRecipesFetched) {
       onRecipesFetched(recipes);
     }
+    if (onClick) {
+      onClick();
+    }
   };
 
   return (
     <button
       onClick={handleClick}
-      className="flex items-center justify-center gap-4 bg-customLightGray rounded-full font-semibold text-sm transition duration-300 px-10 py-2 hover:bg-customBlack hover:text-white md:text-xl"
+      className={`${
+        activeCategory === title
+          ? "bg-customBlack text-white"
+          : "bg-customLightGray"
+      } flex items-center justify-center gap-4 rounded-full font-semibold text-sm transition duration-300 px-10 py-2 hover:bg-customBlack hover:text-white md:text-xl`}
     >
       {icon}
       <p>{title}</p>
