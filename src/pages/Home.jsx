@@ -305,13 +305,10 @@ const Home = () => {
         </div>
       </div>
       <div className="font-krub flex flex-col items-center justify-between bg-customLightGray rounded-[35px] gap-4 my-4 p-4 sm:my-8 px-8 sm:flex-row sm:items-start md:text-xl md:px-20 py-8 xl:text-2xl">
-        <FactAboutUs title="1 Million+" description="Registered Users" />
-        <FactAboutUs title="5,000+" description="Recipes" />
-        <FactAboutUs title="98%" description="User Satisfaction Rate" />
-        <FactAboutUs
-          title="10,000+"
-          description="Officialy Published Recipes"
-        />
+        <FactAboutUs title="500+" description="Registered Users" />
+        <FactAboutUs title="300+" description="Recipes" />
+        <FactAboutUs title="85%" description="User Satisfaction Rate" />
+        <FactAboutUs title="1000+" description="Officialy Published Recipes" />
       </div>
       <div className="font-krub px-2 my-2 sm:my-4 md:px-20 xl:my-8">
         <Heading1
