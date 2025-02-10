@@ -16,7 +16,7 @@ const Recipe = () => {
   }
 
   return (
-    <div className="mt-16 px-4 sm:px-8 md:px-20">
+    <div className="font-krub mt-16 px-4 sm:px-8 md:px-20">
       <div className="flex flex-col-reverse gap-8 2xl:flex-row">
         <img
           src={recipe.strMealThumb}
@@ -48,7 +48,7 @@ const Recipe = () => {
           title="Instructions"
           className="text-start text-2xl m-0 sm:m-0 md:text-4xl xl:m-0"
         />
-        <p className="text-customDarkGray list-disc my-4 md:text-xl xl:text-2xl">
+        <p className="text-customDarkGray my-4 md:text-xl xl:text-2xl">
           {recipe.strInstructions}
         </p>
         {recipe.strYoutube && (
