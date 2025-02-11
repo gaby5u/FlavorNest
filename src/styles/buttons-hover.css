@@ -40,7 +40,8 @@
 .home-1-cta-btn:hover svg,
 .search-btn:hover,
 .login-btn:hover,
-.black-btn:hover svg {
+.black-btn:hover svg,
+.logout-btn:hover {
   animation: rotateCircle 0.5s forwards;
 }
 
