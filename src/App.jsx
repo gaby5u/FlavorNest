@@ -12,7 +12,7 @@ import NotFound from "./pages/NotFound";
 
 function App() {
   return (
-    <div className="p-4 min-h-screen md:p-10">
+    <div className="flex flex-col min-h-screen p-4 md:p-10">
       <Router>
         <Header />
         <Routes>

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import Nav from "./Nav";
 import BurgerOpenedMenu from "./BurgerOpenedMenu";
@@ -49,24 +49,26 @@ const Header = () => {
       </h1>
       <Nav />
       <div className="gap-1 flex items-center lg:gap-4">
-        <button
-          className={`search-btn bg-customLightGray rounded-full p-2 md:p-3`}
-        >
-          <svg
-            width="16"
-            height="16"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
+        <Link to="/search">
+          <button
+            className={`search-btn bg-customLightGray rounded-full p-2 md:p-3`}
           >
-            <path
-              d="M22.0474 22.0465L17.9777 17.9767M17.3963 9.25582C17.3963 10.3247 17.1857 11.3831 16.7767 12.3707C16.3676 13.3582 15.7681 14.2555 15.0122 15.0113C14.2564 15.7672 13.3591 16.3667 12.3716 16.7758C11.3841 17.1848 10.3256 17.3954 9.25672 17.3954C8.18782 17.3954 7.12939 17.1848 6.14186 16.7758C5.15432 16.3667 4.25703 15.7672 3.5012 15.0113C2.74538 14.2555 2.14582 13.3582 1.73677 12.3707C1.32772 11.3831 1.11719 10.3247 1.11719 9.25582C1.11719 7.09708 1.97474 5.02675 3.5012 3.50029C5.02766 1.97384 7.09798 1.11628 9.25672 1.11628C11.4155 1.11628 13.4858 1.97384 15.0122 3.50029C16.5387 5.02675 17.3963 7.09708 17.3963 9.25582Z"
-              stroke="#212121"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-          </svg>
-        </button>
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M22.0474 22.0465L17.9777 17.9767M17.3963 9.25582C17.3963 10.3247 17.1857 11.3831 16.7767 12.3707C16.3676 13.3582 15.7681 14.2555 15.0122 15.0113C14.2564 15.7672 13.3591 16.3667 12.3716 16.7758C11.3841 17.1848 10.3256 17.3954 9.25672 17.3954C8.18782 17.3954 7.12939 17.1848 6.14186 16.7758C5.15432 16.3667 4.25703 15.7672 3.5012 15.0113C2.74538 14.2555 2.14582 13.3582 1.73677 12.3707C1.32772 11.3831 1.11719 10.3247 1.11719 9.25582C1.11719 7.09708 1.97474 5.02675 3.5012 3.50029C5.02766 1.97384 7.09798 1.11628 9.25672 1.11628C11.4155 1.11628 13.4858 1.97384 15.0122 3.50029C16.5387 5.02675 17.3963 7.09708 17.3963 9.25582Z"
+                stroke="#212121"
+                strokeWidth="2"
+                strokeLinecap="round"
+              />
+            </svg>
+          </button>
+        </Link>
         <button
           onClick={signIngWithGoogle}
           className={`login-btn rounded-full bg-customBlack bg-cover bg-center ${

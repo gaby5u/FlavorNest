@@ -18,7 +18,7 @@ const Footer = () => {
             discover new, delicious ways to enjoy food.
           </p>
         </div>
-        <ul className="flex items-center justify-end md:text-xl font-bold gap-4 my-2 sm:my-4 md:flex-col md:gap-8 lg:flex-row xl:text-2xl">
+        <ul className="flex flex-wrap items-center justify-start font-bold gap-4 my-2 sm:my-4 sm:justify-end md:text-xl md:flex-col md:gap-8 lg:flex-row xl:text-2xl">
           <li>
             <NavLink
               to="/recipes"
