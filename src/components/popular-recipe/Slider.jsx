@@ -6,7 +6,7 @@ import { Navigation, Autoplay } from "swiper/modules";
 
 import PopularRecipe from "./PopularRecipe";
 
-import GetRecipes from "../../api/GetRecipes";
+import GetRecipes from "../../api/useRecipes";
 
 const Slider = () => {
   const seafoodRecipes = GetRecipes("Seafood");

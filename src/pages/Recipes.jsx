@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import GetRecipesByCategory from "../api/GetRecipesByCategory";
+import GetRecipesByCategory from "../api/useRecipesByCategory";
 
 import Heading1 from "../components/Heading1";
 import CategoryButton from "../components/CategoryButton";

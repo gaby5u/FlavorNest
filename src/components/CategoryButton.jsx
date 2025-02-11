@@ -1,4 +1,4 @@
-import GetRecipesByCategory from "../api/GetRecipesByCategory";
+import GetRecipesByCategory from "../api/useRecipesByCategory";
 
 const CategoryButton = ({
   icon,

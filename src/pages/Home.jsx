@@ -10,7 +10,7 @@ import AboutUsMini from "../components/about-us-home/AboutUsMini";
 import FactAboutUs from "../components/about-us-home/FactAboutUs";
 import Slider from "../components/popular-recipe/Slider";
 
-import GetRecipes from "../api/GetRecipes";
+import GetRecipes from "../api/useRecipes";
 
 const Home = () => {
   const bestRecipes = GetRecipes("Side");
