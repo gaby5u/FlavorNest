@@ -147,9 +147,10 @@ const Home = () => {
           {bestRecipes.slice(0, 12).map((bestRecipe, index) => (
             <FavRecipe
               key={index}
-              recipeId={bestRecipe.idMeal}
-              image={bestRecipe.strMealThumb}
-              title={bestRecipe.strMeal}
+              recipe={bestRecipe}
+              // recipeId={bestRecipe.idMeal}
+              // image={bestRecipe.strMealThumb}
+              // title={bestRecipe.strMeal}
             />
           ))}
         </div>

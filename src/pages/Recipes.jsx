@@ -52,12 +52,7 @@ const Recipes = () => {
         </div>
         <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-8">
           {fetchedRecipes?.map((fetchedRecipe, index) => (
-            <FavRecipe
-              key={index}
-              recipeId={fetchedRecipe.idMeal}
-              image={fetchedRecipe.strMealThumb}
-              title={fetchedRecipe.strMeal}
-            />
+            <FavRecipe key={index} recipe={fetchedRecipe} />
           ))}
         </div>
       </div>

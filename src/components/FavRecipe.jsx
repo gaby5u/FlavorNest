@@ -1,20 +1,45 @@
 import { useNavigate } from "react-router-dom";
+import { auth } from "../config/firebase";
 
-const FavRecipe = ({ recipeId, image, title }) => {
+const FavRecipe = ({ recipe }) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate(`/recipe/${recipeId}`);
+    navigate(`/recipe/${recipe.idMeal}`);
+  };
+
+  const addToFavorites = () => {
+    if (auth.currentUser) {
+      const existingFavorites =
+        JSON.parse(localStorage.getItem("favorites")) || [];
+      const isAlreadyFavorite = existingFavorites.some(
+        (fav) => fav.idMeal === recipe.idMeal
+      );
+      if (!isAlreadyFavorite) {
+        const updatedFavorites = [...existingFavorites, recipe];
+        localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
+        console.log("Added to favorites");
+      } else {
+        console.log("Recipe is already in favorites");
+      }
+    } else {
+      console.log("You should login for adding in favorites");
+    }
   };
 
   return (
-    <div
-      onClick={handleClick}
-      className="bg-customLightGray rounded-[35px] max-w-full cursor-pointer border-2 border-customLightGray transition duration-200 hover:border-customOrange hover:scale-[1.02] md:max-w-[300px] lg:max-w-[400px]"
-    >
+    <div className="bg-customLightGray rounded-[35px] max-w-full cursor-pointer border-2 border-customLightGray transition duration-200 hover:border-customOrange hover:scale-[1.02] md:max-w-[300px] lg:max-w-[400px]">
       <div className="relative">
-        <img src={image} alt={title} className="rounded-t-[33px] w-full" />
-        <div className="flex items-center justify-center rounded-full bg-white absolute top-2 right-2 w-[53px] h-[53px]">
+        <img
+          onClick={handleClick}
+          src={recipe.strMealThumb}
+          alt={recipe.strMeal}
+          className="rounded-t-[33px] w-full"
+        />
+        <div
+          onClick={() => addToFavorites()}
+          className="flex items-center justify-center rounded-full bg-white absolute top-2 right-2 w-[53px] h-[53px]"
+        >
           <svg
             className="cursor-pointer fill-transparent "
             width="29"
@@ -32,7 +57,7 @@ const FavRecipe = ({ recipeId, image, title }) => {
         </div>
       </div>
       <div className="p-8">
-        <h3 className="font-bold">{title}</h3>
+        <h3 className="font-bold">{recipe.strMeal}</h3>
       </div>
     </div>
   );

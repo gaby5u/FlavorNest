@@ -44,12 +44,7 @@ const Search = () => {
       <div className="flex justify-center items-center flex-wrap gap-4 sm:gap-8">
         {recipes &&
           recipes.map((recipe, index) => (
-            <FavRecipe
-              key={index}
-              recipeId={recipe.idMeal}
-              image={recipe.strMealThumb}
-              title={recipe.strMeal}
-            />
+            <FavRecipe key={index} recipe={recipe} />
           ))}
       </div>
     </div>
