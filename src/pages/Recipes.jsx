@@ -1,15 +1,15 @@
 import { useEffect, useState } from "react";
-import GetRecipesByCategory from "../api/useRecipesByCategory";
 
 import Heading1 from "../components/Heading1";
 import CategoryButton from "../components/CategoryButton";
 import FavRecipe from "../components/FavRecipe";
-import GetRecipesCategories from "../api/GetRecipesCategories";
+import useRecipesCategories from "../api/useRecipesCategories";
+import useRecipesByCategories from "../api/useRecipesByCategory";
 import GetRecipeIcon from "../functions/GetRecipeIcon";
 
 const Recipes = () => {
-  const categories = GetRecipesCategories();
-  const defaultRecipes = GetRecipesByCategory("Beef");
+  const categories = useRecipesCategories([]);
+  const defaultRecipes = useRecipesByCategories("Beef");
   const [fetchedRecipes, setFetchedRecipes] = useState([]);
   const [activeCategory, setActiveCategory] = useState(null);
 
@@ -39,7 +39,7 @@ const Recipes = () => {
       <div className="font-krub my-4 sm:my-8 xl:my-16">
         <Heading1 title="What to Cook?" position="middle" highlight="Cook" />
         <div className="flex items-center justify-center gap-4 flex-wrap my-8">
-          {categories.map((category, index) => (
+          {categories?.map((category, index) => (
             <CategoryButton
               onClick={() => handleCategoryClick(category)}
               onRecipesFetched={handleRecipesFetched}
@@ -51,7 +51,7 @@ const Recipes = () => {
           ))}
         </div>
         <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-8">
-          {fetchedRecipes.map((fetchedRecipe, index) => (
+          {fetchedRecipes?.map((fetchedRecipe, index) => (
             <FavRecipe
               key={index}
               recipeId={fetchedRecipe.idMeal}
