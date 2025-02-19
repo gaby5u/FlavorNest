@@ -1,4 +1,3 @@
-import React, { useEffect } from "react";
 import WhatWeOffer from "../components/introduction-home/WhatWeOffer";
 import FavRecipe from "../components/FavRecipe";
 
@@ -145,13 +144,7 @@ const Home = () => {
         />
         <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-8">
           {bestRecipes.slice(0, 12).map((bestRecipe, index) => (
-            <FavRecipe
-              key={index}
-              recipe={bestRecipe}
-              // recipeId={bestRecipe.idMeal}
-              // image={bestRecipe.strMealThumb}
-              // title={bestRecipe.strMeal}
-            />
+            <FavRecipe key={index} recipe={bestRecipe} />
           ))}
         </div>
       </div>
