@@ -3,13 +3,13 @@ import { getAuth, GoogleAuthProvider } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAal69oeUSiJ0efHucUYVcfeY47BLspeUs",
+  apiKey: import.meta.env.VITE_API_KEY,
   authDomain: "flavornest-a2fff.firebaseapp.com",
   projectId: "flavornest-a2fff",
   storageBucket: "flavornest-a2fff.firebasestorage.app",
   messagingSenderId: "180013542081",
-  appId: "1:180013542081:web:cafc42692bd33f60414240",
-  measurementId: "G-392RECGLYL",
+  appId: import.meta.env.VITE_APP_ID,
+  measurementId: import.meta.env.VITE_MEASUREMENT_ID,
 };
 
 const app = initializeApp(firebaseConfig);
