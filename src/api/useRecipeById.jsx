@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 const useRecipeById = (id) => {
   const [recipe, setRecipe] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [isLoading, setisLoading] = useState(true);
 
   useEffect(() => {
     const fetchRecipeById = async () => {
@@ -12,11 +12,10 @@ const useRecipeById = (id) => {
           `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`
         );
         setRecipe(response.data.meals ? response.data.meals[0] : null);
-        console.log(response.data.meals);
       } catch (error) {
         console.log("Error fetching recipe by id", error);
       } finally {
-        setLoading(false);
+        setisLoading(false);
       }
     };
     if (id) {
@@ -24,7 +23,7 @@ const useRecipeById = (id) => {
     }
   }, []);
 
-  return { recipe, loading };
+  return { recipe, isLoading };
 };
 
 export default useRecipeById;

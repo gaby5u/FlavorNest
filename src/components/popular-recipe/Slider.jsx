@@ -35,7 +35,7 @@ const Slider = () => {
       }}
       className="mySwiper py-2 sm:py-8"
     >
-      {seafoodRecipes.slice(0, 20).map((seafoodRecipe, index) => (
+      {seafoodRecipes.recipes.slice(0, 20).map((seafoodRecipe, index) => (
         <SwiperSlide className="flex justify-center" key={index}>
           <PopularRecipe
             recipeId={seafoodRecipe.idMeal}

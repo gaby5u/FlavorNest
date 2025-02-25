@@ -11,7 +11,7 @@ const CategoryButton = ({
 
   const handleClick = () => {
     if (onRecipesFetched) {
-      onRecipesFetched(recipes);
+      onRecipesFetched(recipes.recipes);
     }
     if (onClick) {
       onClick();

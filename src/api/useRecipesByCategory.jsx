@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 
 const GetRecipesByCategory = (category) => {
   const [recipes, setRecipes] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     const fetchRecipeByCategory = async () => {
       try {
@@ -12,12 +13,14 @@ const GetRecipesByCategory = (category) => {
         setRecipes(response.data.meals);
       } catch (error) {
         console.log("Error fetching recipes by category: ", error);
+      } finally {
+        setIsLoading(false);
       }
     };
     fetchRecipeByCategory();
   }, []);
 
-  return recipes;
+  return { recipes, isLoading };
 };
 
 export default GetRecipesByCategory;

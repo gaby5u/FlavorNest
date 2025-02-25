@@ -8,7 +8,7 @@ const Favorites = () => {
   const { favoritesList } = useContext(FavoriteContextP);
 
   return (
-    <div className="flex-grow px-4 py-8 md:py-16">
+    <div className="flex-grow px-4 py-4 md:py-8">
       {auth.currentUser ? (
         <>
           <Heading1
@@ -18,7 +18,7 @@ const Favorites = () => {
             className="my-16"
           />
           <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-8">
-            {favoritesList.map((recipe, index) => (
+            {favoritesList.map((recipe) => (
               <FavRecipe key={recipe.idMeal} recipe={recipe} />
             ))}
           </div>
@@ -28,7 +28,7 @@ const Favorites = () => {
           title="You should login for seeing your favorite recipes"
           highlight="login"
           position="middle"
-          className="my-26"
+          className="my-16"
         />
       )}
     </div>

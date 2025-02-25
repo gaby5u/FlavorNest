@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-const GetRecipesbyCategory = () => {
+const useRecipesByCategories = () => {
   const [recipe, setRecipe] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     const fetchRecipeByCategory = async () => {
       try {
@@ -12,12 +13,14 @@ const GetRecipesbyCategory = () => {
         setRecipe(response.data.meals);
       } catch (error) {
         console.log("Error fetching categories:", error);
+      } finally {
+        setIsLoading(false);
       }
     };
     fetchRecipeByCategory();
   }, []);
 
-  return recipe;
+  return { recipe, isLoading };
 };
 
-export default GetRecipesbyCategory;
+export default useRecipesByCategories;

@@ -5,11 +5,10 @@ import Heading1 from "../components/Heading1";
 
 const Search = () => {
   const [searchedMeal, setSearchedMeal] = useState("");
-  const { recipes, isLoading } = useSearchByName(searchedMeal);
+  const recipes = useSearchByName(searchedMeal);
 
   return (
     <div className="flex flex-col items-center flex-grow px-4 py-8 md:py-16">
-      {isLoading && <p>Loading...</p>}
       <div className="relative w-[100%] max-w-[900px]">
         <input
           type="text"
